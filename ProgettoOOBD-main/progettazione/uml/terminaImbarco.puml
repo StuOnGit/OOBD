@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor user
+
+user -> ControllerGate: terminaImbarco()
+activate ControllerGate
+
+ControllerGate -> gCard: getGate(): Gate
+activate gCard
+gCard --> ControllerGate: g
+deactivate gCard
+ControllerGate -> g:end()
+activate g
+opt status is OCCUPATO
+g->g:setStatus(LIBERO)
+g->tratta:concludi()
+tratta-->g
+loop foreach c in codeImbarco
+g->codaImbarco:setTempoEffettivo
+codaImbarco-->g
+end
+g->g:setTratta(null)
+g->g:codeimbarco.clear()
+
+
+end
+g --> ControllerGate: p: Pair<Tratta, List<CodaImbarco>>
+deactivate g
+
+ControllerGate->TrattaDao:update(p.getKey)
+activate TrattaDao
+TrattaDao--> ControllerGate
+deactivate TrattaDao
+ControllerGate-> GateDao:update(g)
+activate GateDao
+GateDao-->ControllerGate
+deactivate GateDao
+
+loop foreach c in p.getValue()
+ControllerGate->codaImbarcoDao:chiudiCoda(c)
+activate codaImbarcoDao
+codaImbarcoDao-->ControllerGate
+deactivate codaImbarcoDao
+end
+ControllerGate->gCard:updateLabels
+activate gCard
+gCard-->ControllerGate
+deactivate gCard
+ControllerGate-> popup:setAperto
+activate popup
+popup-->ControllerGate
+deactivate popup
+ControllerGate --> user
+deactivate ControllerGate
+
+
+
+@enduml

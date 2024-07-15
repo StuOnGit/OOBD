@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#moveWindow" onMousePressed="#setOffset" prefHeight="215.0" prefWidth="319.0" stylesheets="@../css/white.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerConfirmCheckImbarco">
+   <children>
+      <Label fx:id="imbarcoCheckLabel" layoutX="93.0" layoutY="15.0" prefHeight="39.0" prefWidth="217.0" text="ImbCheck" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fx:id="iconCheckImbarco" fill="#223edd" selectionFill="BLACK" />
+         </graphic>
+      </Label>
+      <Label layoutX="46.0" layoutY="53.0" prefHeight="38.0" prefWidth="231.0" text="avvenuto con successo!">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <HBox layoutX="-4.0" layoutY="115.0" prefHeight="31.0" prefWidth="331.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="123.0" text="Passeggero:" textFill="#15196b">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="passeggeroLabel" prefHeight="31.0" prefWidth="224.0" text="nome e cognome" textFill="#15196b">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox layoutX="-8.0" layoutY="154.0" prefHeight="39.0" prefWidth="339.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="78.0" text="Bagagli:" textFill="#15196b">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="bagagliLabel" prefHeight="31.0" prefWidth="132.0" text="numero bagagli" textFill="#15196b">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

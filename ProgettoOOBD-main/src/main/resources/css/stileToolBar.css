@@ -1,0 +1,8 @@
+FontAwesomeIcon:hover {
+    -fx-cursor: hand;
+}
+
+.menuBar:hover{
+    -fx-border-color: #5594cf;
+    -fx-border-width: 5px 0px 5px 0px;
+}

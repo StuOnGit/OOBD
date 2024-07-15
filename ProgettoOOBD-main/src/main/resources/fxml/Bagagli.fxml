@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="870.0" style="-fx-background-color: f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerBagagli">
+   <children>
+      <TextField fx:id="searchBar" layoutX="73.0" layoutY="47.0" prefHeight="41.0" prefWidth="282.0" promptText="🔍Codice Biglietto..." style="-fx-background-color: #dcdcdc; -fx-background-radius: 25px;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="cancelBtn" contentDisplay="GRAPHIC_ONLY" layoutX="22.0" layoutY="48.0" onAction="#canc" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20px; -fx-background-color: #dcdcdc;">
+         <graphic>
+            <FontAwesomeIcon iconName="REMOVE" size="20px" />
+         </graphic>
+      </JFXButton>
+      <HBox layoutX="-1.0" layoutY="122.0" prefHeight="74.0" prefWidth="870.0">
+         <children>
+            <Label text="N. Biglietto">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label text="Numero Volo">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label text="Nome Cliente">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label text="Documento">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label text="Codice Fiscale">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="185.0" prefHeight="515.0" prefWidth="870.0" style="-fx-background-color: white;">
+         <children>
+            <HBox fx:id="hboxDati" prefHeight="74.0" prefWidth="870.0" style="-fx-border-color: #c28e00; -fx-border-width: 1 0 1 0;">
+               <children>
+                  <Label fx:id="nBiglietto" alignment="CENTER" contentDisplay="RIGHT" prefHeight="71.0" prefWidth="172.0" text="N. Biglietto" textFill="#a41212">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="nVolo" alignment="CENTER" prefHeight="71.0" prefWidth="185.0" text="Numero Volo">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="nome" alignment="CENTER" prefHeight="71.0" prefWidth="246.0" text="Nome Cliente">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="documento" alignment="CENTER" prefHeight="71.0" prefWidth="163.0" text="Documento">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="codiceFiscale" alignment="CENTER" prefHeight="72.0" prefWidth="226.0" text="Codice Fiscale">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="nessunBiglietto" alignment="CENTER" disable="true" layoutX="219.0" layoutY="158.0" prefHeight="85.0" prefWidth="446.0" text="Nessun biglietto trovato corrispondente" textAlignment="CENTER" visible="false" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Text fx:id="bagagliText" layoutX="383.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bagagli" visible="false">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Text>
+            <ListView fx:id="bagagliList" editable="true" layoutY="158.0" prefHeight="298.0" prefWidth="870.0" stylesheets="@../css/scrollBarStyle.css" visible="false" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="375.0" layoutY="49.0" onAction="#cercaBagagli" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #dcdcdc; -fx-background-radius: 25;" text="Cerca Bagagli" textFill="#01874e">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pannello" onMouseDragged="#moveWindow" onMousePressed="#setOffset" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerMainPane">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(#162643,#2d5a89);" stylesheets="@../css/classes.css">
+         <children>
+            <Hyperlink layoutX="14.0" layoutY="663.0" onAction="#logout" text="LogOut" textFill="RED" />
+            <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" layoutX="11.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/nome+logo_W.png" />
+               </image>
+            </ImageView>
+            <VBox fx:id="lpBox" layoutY="109.0" prefHeight="483.0" prefWidth="230.0">
+               <children>
+                  <JFXButton fx:id="tratteBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Tratte" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="RANDOM" onMouseClicked="#setFrame">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="gateBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Gate" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="TICKET" onMouseClicked="#setFrame">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="checkInBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="CheckIn" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="QRCODE" onMouseClicked="#setFrame">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="imbarcoBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Imbarco" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="BARCODE">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="compagnieBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Compagnie" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="BANK">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="aereiBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Bagagli" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="BRIEFCASE">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="dipendentiBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Dipendenti" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="USERS" onMouseClicked="#setFrame">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="statisticheBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Statistiche" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="BAR_CHART" selectionEnd="0">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="tabelloneBtn" alignment="BASELINE_LEFT" onMouseClicked="#setFrame" prefHeight="50.0" prefWidth="230.0" ripplerFill="BLACK" styleClass="sLabels" text="Tabellone" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="21.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="TH" onMouseClicked="#setFrame">
+                           <font>
+                              <Font name="Calibri" size="21.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label fx:id="dipendenteLbl" layoutX="19.0" layoutY="622.0" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="230.0" prefHeight="700.0" prefWidth="870.0">
+         <children>
+            <Pane fx:id="trattePane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="gatePane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="checkInPane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="imbarcoPane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="compagniePane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="bagagliPane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="dipendentiPane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="statistichePane" prefHeight="700.0" prefWidth="870.0" />
+            <Pane fx:id="tabellonePane" prefHeight="700.0" prefWidth="870.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

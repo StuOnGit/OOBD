@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onMouseDragged="#moveWindow" onMousePressed="#setOffset" prefHeight="500.0" prefWidth="450.0" styleClass="background" stylesheets="@../css/white.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerDipendentiAdd">
+   <children>
+      <JFXTextField fx:id="nome" focusColor="#4bb24b" labelFloat="true" layoutX="51.0" layoutY="138.0" prefHeight="32.0" prefWidth="161.0" promptText="Nome" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#787878">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="cognome" focusColor="#4bb24b" labelFloat="true" layoutX="245.0" layoutY="138.0" prefHeight="32.0" prefWidth="155.0" promptText="Cognome" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#787878">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="compagnia" focusColor="#4bb24b" layoutX="242.0" layoutY="314.0" prefHeight="32.0" prefWidth="111.0" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#787878" />
+      <JFXTextField fx:id="password" focusColor="#4bb24b" labelFloat="true" layoutX="247.0" layoutY="235.0" prefHeight="31.0" prefWidth="155.0" promptText="Password" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#787878">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="email" focusColor="#4bb24b" labelFloat="true" layoutX="49.0" layoutY="235.0" promptText="Email" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#787878">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="ruolo" focusColor="#4bb24b" layoutX="47.0" layoutY="314.0" prefHeight="31.0" prefWidth="111.0" style="-fx-prompt-text-fill: gray; -fx-text-fill: white;" unFocusColor="#787878" />
+      <JFXButton fx:id="annullaBtn" layoutX="5.0" layoutY="438.0" onAction="#close" prefHeight="37.0" prefWidth="121.0" text="Annulla" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#ab3636" iconName="REPLY" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="addDipendente" contentDisplay="RIGHT" layoutX="297.0" layoutY="431.0" onAction="#add" prefHeight="44.0" style="-fx-background-color: teal;" text="Aggiungi" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="CHECK_CIRCLE" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="122.0" layoutY="37.0" text="Nuovo dipendente" textFill="#51cfc4">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

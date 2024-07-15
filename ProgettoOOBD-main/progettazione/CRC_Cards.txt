@@ -1,0 +1,827 @@
+[
+  {
+    "name": "ControllerAcquisto",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "setta la tratta",
+      "compra il biglietto",
+      "gestisce i prezzi del biglietto"
+    ],
+    "collaborators": [
+      "Initializable",
+      "Biglietto",
+      "BigliettoDao",
+      "CodaImbarcoDao"
+    ]
+  },
+  {
+    "name": "ControllerBagagli",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce i bagagli",
+      ""
+    ],
+    "collaborators": [
+      "Initializable",
+      "Biglietto",
+      "BagagliDao",
+      "BigliettoDao"
+    ]
+  },
+  {
+    "name": "ControllerCheckIn",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestice il checkIn",
+      "imbarca i bagagli",
+      "gestisce la GUI CheckIn"
+    ],
+    "collaborators": [
+      "Initializable",
+      "Biglietto",
+      "Tratta",
+      "Aeroporto",
+      "BigliettoDao",
+      "BagaglioDao",
+      "TrattaDao",
+      "ControllerConfirmCheckImbarco"
+    ]
+  },
+  {
+    "name": "ControllerCompagnie",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "aggiunge ed elimina compagnie",
+      "ricerca per nome, icao, nazione",
+      ""
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Refreshable (interface)",
+      "UserRestricted (interface)",
+      "ControllerCompagnieAdd",
+      "CompagniaCard",
+      "Dipendente"
+    ]
+  },
+  {
+    "name": "ControllerCompagnieAdd",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Gestisce la GUI CompagniaAdd",
+      "conferma l'aggiunta di una compagnia o la annulla"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Toast",
+      "Compagnia",
+      "CompagniaDao"
+    ]
+  },
+  {
+    "name": "ControllerConfirmCheckImbarco",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "setta la conferma del checkIn e dell'imbarco",
+      "gestisce la GUI ConfirmCheckImbarco"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "ControllerDipendenti",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI Dipendenti",
+      "cerca dipendenti",
+      "aggiunge dipendenti",
+      "elimina dipendenti"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "refreshable (interface)",
+      "UserRestricted (interface)",
+      "Dipendente",
+      "DipdentiCard",
+      "ControllerDIpendentiAdd",
+      "DipendentiDao"
+    ]
+  },
+  {
+    "name": "ControllerDipendentiAdd",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "conferma l'aggiunta del dipendente",
+      "gestisce la GUI DipendentiAdd",
+      ""
+    ],
+    "collaborators": [
+      "initializable (interface)",
+      "UserRestricted  (interface)",
+      "Dipendente",
+      "DipendentiDao"
+    ]
+  },
+  {
+    "name": "ControllerDipendentiCard",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce le componenti delle carte dei dipendenti",
+      "gestisce l'apertura dei dati del dipendente"
+    ],
+    "collaborators": [
+      "Dipendente",
+      "ControllerDipendentiDati"
+    ]
+  },
+  {
+    "name": "ControllerDipendentiDati",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la gui DIpendentiDati",
+      "setta i dati del dipendente",
+      "licenzia dipendenti"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Dipendente",
+      "DipendentiDao"
+    ]
+  },
+  {
+    "name": "ControllerGate",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI Gate",
+      "chiude, apre un gate",
+      "termina imbarco",
+      "cerca gate",
+      "setta la tratta"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Refreshable  (interface)",
+      "UserRestricted (interface)",
+      "GateCard",
+      "GateCardPopup",
+      "Tratta",
+      "Aeroporto",
+      "CodaImbarco",
+      "Dipendente",
+      "Dipendente",
+      "TrattaDao",
+      "CodaImbarcoDao",
+      "GateDao"
+    ]
+  },
+  {
+    "name": "ControllerImbarco",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI Imbarco",
+      "verifica se esiste il biglietto",
+      "aggiunge bagagli al DB",
+      "effettua l'imbarco"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "BigliettoDao",
+      "Biglietto",
+      "TrattaDao",
+      "Tratta",
+      "Aeroporto",
+      "ControllerConfirmCheckImbarco",
+      "BagaglioDao"
+    ]
+  },
+  {
+    "name": "ControllerLogin",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI Login",
+      "fa il login di un utente "
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Dipendente",
+      "ControllerMainPane"
+    ]
+  },
+  {
+    "name": "ControllerMainPane",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI MainPane",
+      "gestisce la barra di controllo del programma"
+    ],
+    "collaborators": [
+      "UserRestricted (interface)",
+      "Dipendente",
+      "ControllerTratte",
+      "ControllerGate",
+      "ControllerDipendenti",
+      "ControllerCompagnie",
+      "ControllerStatistiche",
+      "ControllerTabellone",
+      "Refreshable "
+    ]
+  },
+  {
+    "name": "ControllerStatistiche",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI Statistiche",
+      "confronta l'utilizzo effettivo con lo stimato in base al Mese, Anno, Giorno e al Gate"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Gate",
+      "GateDao",
+      "CodaImbarcoDao"
+    ]
+  },
+  {
+    "name": "ControllerTabellone",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI Tabellone",
+      "mostra arrivi e partenze del giorno corrente"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Refreshable (interface)",
+      "Aeroporto",
+      "Tratta",
+      "TrattaDao"
+    ]
+  },
+  {
+    "name": "ControllerToolBar",
+    "superclasses": "WIndowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI ToolBar",
+      "gestisce i tasti di chiusura e \"ad icona\" del programma"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "ControllerMainPane"
+    ]
+  },
+  {
+    "name": "ControllerTratte",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestice la GUI Tratte",
+      "permette l'eliminazione delle tratte",
+      "ricerca la tratta in base alla Partenza, Arrivo, Compagnia o Numero Volo"
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "Refreshable (interface)",
+      "UserRestricted (interface)",
+      "Tratta",
+      "Dipendente",
+      "TrattaHbox",
+      "ControllerTratteInfo",
+      "ControllerTratteAdd",
+      ""
+    ]
+  },
+  {
+    "name": "ControllerTratteAdd",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI TratteAdd",
+      "aggiunge tratte",
+      ""
+    ],
+    "collaborators": [
+      "Initializable (interface)",
+      "UserRestricted (interface)",
+      "Aeroporto",
+      "Dipendente",
+      "Tratta",
+      "IdFatctory",
+      "Toast",
+      "TrattaDao",
+      "CodaImbarcoDao",
+      "CompagniaDao"
+    ]
+  },
+  {
+    "name": "ControllerTratteInfo",
+    "superclasses": "WindowDragger",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "gestisce la GUI TratteInfo",
+      "acquista biglietti",
+      "mostra dati della tratta"
+    ],
+    "collaborators": [
+      "UserRestricted (interface)",
+      "Aeroporto",
+      "Dipendente",
+      "Tratta",
+      "ControllerAcquisto",
+      "CodaImbarco",
+      "TrattaDao"
+    ]
+  },
+  {
+    "name": "BagaglioInfo",
+    "superclasses": "HBox",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "contiene le informazioni di un bagaglio"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "CompagniaCard",
+    "superclasses": "Pane",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "contiene i dati della compagnia"
+    ],
+    "collaborators": [
+      "Compagnia",
+      ""
+    ]
+  },
+  {
+    "name": "DipendentiCard",
+    "superclasses": "AnchorPane",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "contiene i dati del dipendente",
+      ""
+    ],
+    "collaborators": [
+      "Dipendente",
+      "DipendentiEnum (Enumeration)",
+      ""
+    ]
+  },
+  {
+    "name": "GateCard",
+    "superclasses": "Pane",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "contiene i dati del gate",
+      "gestisce la GateCard.fxml"
+    ],
+    "collaborators": [
+      "Gate",
+      ""
+    ]
+  },
+  {
+    "name": "GateCardPopup",
+    "superclasses": "JfxPopup",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "mostra le azioni effettuabili in GateCard"
+    ],
+    "collaborators": [
+      "GateCard"
+    ]
+  },
+  {
+    "name": "Toast",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "mostra un messaggi di \"OK\"",
+      ""
+    ],
+    "collaborators": [
+      "JFXSnackBar"
+    ]
+  },
+  {
+    "name": "TrattaHbox",
+    "superclasses": "HBox",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "setta i dati in TrattaHbox.fxml"
+    ],
+    "collaborators": [
+      "Tratta",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Aeroporto",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "controlla se due aeroporti sono uguali",
+      ""
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Bagaglio",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      ""
+    ],
+    "collaborators": [
+      "Biglietto",
+      ""
+    ]
+  },
+  {
+    "name": "Biglietto",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      ""
+    ],
+    "collaborators": [
+      "Cliente",
+      "CodeEnum (enumeration)",
+      ""
+    ]
+  },
+  {
+    "name": "Cliente",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      ""
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "CodaImbarco",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "setta le classi disponibili per la coda"
+    ],
+    "collaborators": [
+      "CodeEnum (enumeration)",
+      ""
+    ]
+  },
+  {
+    "name": "Compagnia",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "confronta due compagnie"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Dipendente",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      ""
+    ],
+    "collaborators": [
+      "Compagnia",
+      "DipendentiEnum (enumeration)"
+    ]
+  },
+  {
+    "name": "Gate",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "può essere aperto e chiuso",
+      "setta la tratta"
+    ],
+    "collaborators": [
+      "GateStatus",
+      "Tratta",
+      "CodaImbarco"
+    ]
+  },
+  {
+    "name": "Tratta",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      ""
+    ],
+    "collaborators": [
+      "Aeroporto",
+      "Compagnia"
+    ]
+  },
+  {
+    "name": "AeroportoDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce gli aeroporti dal DB",
+      ""
+    ],
+    "collaborators": [
+      "Aeroporto",
+      ""
+    ]
+  },
+  {
+    "name": "BagaglioDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce i bagagli dal DB",
+      "inserisce bagagli al DB"
+    ],
+    "collaborators": [
+      "Bagaglio"
+    ]
+  },
+  {
+    "name": "BigliettoDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce lista di biglietti dal DB",
+      "update di biglietto nel DB",
+      "inserisce e elimina Biglietto nel DB",
+      "restituisce la compagnia del Biglietto dal DB"
+    ],
+    "collaborators": [
+      "Biglietto",
+      "Tratta",
+      "Compagnia",
+      "CodeEnum (enumerazione)"
+    ]
+  },
+  {
+    "name": "CodaImbarcoDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce le code d'imbarco dal DB",
+      "aggiunge code d'imbarco al DB",
+      "apre e chiude le code d'imbarco nel DB",
+      "elimina code d'imbarco nel DB",
+      "restituisce i minuti stimati ed effettivi d'utilizzo per giorno, settimana, mese e Gate"
+    ],
+    "collaborators": [
+      "CodaImbarco",
+      "Tratta",
+      "CodeEnum (enumeration)",
+      "Biglietto",
+      "Gate"
+    ]
+  },
+  {
+    "name": "CompagniaDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce compagnie dal DB",
+      "inserisce compagnia nel DB",
+      ""
+    ],
+    "collaborators": [
+      "Compagnia"
+    ]
+  },
+  {
+    "name": "DipendentiDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "elimina, aggiunge  dipendenti al DB",
+      "restituisce dipendenti dal DB"
+    ],
+    "collaborators": [
+      "Dipendente",
+      "Compagnia",
+      "DipendentiEnum (enumeration)"
+    ]
+  },
+  {
+    "name": "GateDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce gate dal DB",
+      "modifica gate nel DB"
+    ],
+    "collaborators": [
+      "Gate",
+      "Tratta",
+      "CodaImbarco"
+    ]
+  },
+  {
+    "name": "TrattaDao",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "restituisce tratte dal DB",
+      "inserisce, modifica ed elimina tratte dal DB",
+      "restituisce passeggeri in base alla tratta dal DB"
+    ],
+    "collaborators": [
+      "Tratta",
+      "Aeroporto",
+      "Compagnia",
+      "Tratta",
+      "AeroportoDao",
+      "BigliettoDao",
+      "CompagniaDao"
+    ]
+  },
+  {
+    "name": "PGConnection",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "connette al DataBase "
+    ],
+    "collaborators": [
+      "Connection",
+      ""
+    ]
+  },
+  {
+    "name": "CardRIppler",
+    "superclasses": "JFXRippler",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      ""
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "IdFactory",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "crea una stringa randomica",
+      "crea un numero volo"
+    ],
+    "collaborators": [
+      "Random",
+      "Compagnia",
+      "TrattaDao"
+    ]
+  },
+  {
+    "name": "Refreshable",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 3,
+    "responsibilities": [
+      "implementa il refresh e",
+      "la possibilità di vedere se c'è il refresh "
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "UserRestricted",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 3,
+    "responsibilities": [
+      "implementa la possibilità di settare l'utente loggato"
+    ],
+    "collaborators": [
+      "Dipendente"
+    ]
+  },
+  {
+    "name": "Validators",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "crea validators per email, passaporto, codice fiscale, patente, cartam d'identità e testo vuoto"
+    ],
+    "collaborators": [
+      "ValidatorBase",
+      "TextInputControl"
+    ]
+  },
+  {
+    "name": "WindowDragger",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "setta l'offset per muovere le finestre col mouse"
+    ],
+    "collaborators": [
+      "Window"
+    ]
+  },
+  {
+    "name": "GoAirlines",
+    "superclasses": "Application",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "manda in avvio il programma aprendo il Login"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Master",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "manda in esecuzione il GoAirlines",
+      "si connette al DB"
+    ],
+    "collaborators": [
+      "File",
+      "PGConnection",
+      ""
+    ]
+  }
+]

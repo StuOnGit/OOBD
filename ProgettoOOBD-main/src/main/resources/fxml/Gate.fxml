@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="870.0" style="-fx-background-color: f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerGate">
+    <children>
+        <BorderPane prefHeight="700.0" prefWidth="870.0">
+            <top>
+                <Pane prefHeight="100.0" prefWidth="870.0" style="-fx-background-color: f0f0f0;" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="searchBar" layoutX="88.0" layoutY="30.0" onKeyTyped="#search" prefHeight="40.0" prefWidth="426.0" promptText="🔍Search..." style="-fx-background-radius: 25px; -fx-background-color: #dcdcdc; -fx-accent: c0c0c0;">
+                            <font>
+                                <Font name="Calibri" size="18.0" />
+                            </font>
+                        </TextField>
+                        <JFXButton fx:id="cancelBtn" contentDisplay="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20px; -fx-background-color: #dcdcdc;" textFill="#ffffff00">
+                            <graphic>
+                                <FontAwesomeIcon iconName="REMOVE" size="20px" />
+                            </graphic>
+                        </JFXButton>
+                        <JFXComboBox fx:id="searchMode" layoutX="544.0" layoutY="36.0" prefHeight="28.0" prefWidth="88.0" />
+                  <JFXCheckBox fx:id="occupatiCheck" layoutX="674.0" layoutY="21.0" onAction="#statusFilter" text="Occupati" />
+                  <JFXCheckBox fx:id="liberiCheck" layoutX="674.0" layoutY="50.0" onAction="#statusFilter" text="Liberi" />
+                  <JFXCheckBox fx:id="chiusiCheck" layoutX="762.0" layoutY="21.0" onAction="#statusFilter" text="Chiusi" />
+                    </children>
+                </Pane>
+            </top>
+            <center>
+                <ScrollPane fx:id="scroll" centerShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" pannable="true" prefHeight="600.0" prefViewportHeight="600.0" prefViewportWidth="870.0" prefWidth="870.0" scaleShape="false" styleClass="noFocus" stylesheets="@../css/scrollBarStyle.css" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+      <Label fx:id="nessunGate" disable="true" layoutX="214.0" layoutY="292.0" prefHeight="85.0" prefWidth="446.0" text="Nessun Gate corrispondente con i parametri di ricerca" textAlignment="CENTER" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+        <JFXSpinner fx:id="spinner" layoutX="415.0" layoutY="350.0" visible="false" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="870.0" style="-fx-background-color: f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerTabellone">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="870.0" style="-fx-background-color: f0f0f0;">
+         <children>
+            <JFXButton fx:id="partenzeBtn" contentDisplay="RIGHT" onAction="#partenze" prefHeight="100.0" prefWidth="435.0" style="-fx-background-color: black; -fx-background-radius: 0; -fx-text-fill: white;" text="Partenze" textFill="WHITE">
+               <font>
+                  <Font size="33.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="PLANE" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="arriviBtn" contentDisplay="RIGHT" layoutX="435.0" onAction="#arrivi" prefHeight="100.0" prefWidth="435.0" style="-fx-background-radius: 0; -fx-background-color: f0f0f0; -fx-text-fill: black;" text="Arrivi">
+               <font>
+                  <Font size="33.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="PLANE" rotate="90.0" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <GridPane alignment="CENTER" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="870.0" style="-fx-background-color: black;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.5" minWidth="10.0" prefWidth="217.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.5" minWidth="10.0" prefWidth="217.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.5" minWidth="10.0" prefWidth="217.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.5" minWidth="10.0" prefWidth="217.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="239.5" minHeight="5.0" prefHeight="40.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="560.0" minHeight="10.0" prefHeight="560.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="partenzaLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="217.0" text="Partenza" textAlignment="JUSTIFY" textFill="#9c9c9c" GridPane.columnIndex="2">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="215.0" text="Volo" textAlignment="JUSTIFY" textFill="#9c9c9c">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="destinazioneLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="217.0" text="Destinazione" textAlignment="JUSTIFY" textFill="#9c9c9c" GridPane.columnIndex="1">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="224.0" text="Stato" textAlignment="JUSTIFY" textFill="#9c9c9c" GridPane.columnIndex="3">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <VBox fx:id="voloBox" prefWidth="217.0" spacing="10.0" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></VBox>
+            <VBox fx:id="destinazioneBox" prefWidth="217.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></VBox>
+            <VBox fx:id="partenzaBox" prefWidth="217.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></VBox>
+            <VBox fx:id="statoBox" prefWidth="217.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

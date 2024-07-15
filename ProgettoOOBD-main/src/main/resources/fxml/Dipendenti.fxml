@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="870.0" style="-fx-background-radius: 0 25 25 0;" stylesheets="@../css/toast.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerDipendenti">
+   <children>
+      <BorderPane prefHeight="700.0" prefWidth="870.0">
+         <top>
+            <Pane prefHeight="100.0" prefWidth="870.0" style="-fx-background-color: f0f0f0;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="searchBar" layoutX="88.0" layoutY="30.0" onKeyTyped="#search" prefHeight="40.0" prefWidth="426.0" promptText="🔍Search..." style="-fx-background-radius: 25px; -fx-background-color: #dcdcdc; -fx-accent: c0c0c0;">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="cancelBtn" contentDisplay="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20px; -fx-background-color: #dcdcdc;" textFill="#ffffff00">
+                     <graphic>
+                        <FontAwesomeIcon iconName="REMOVE" size="20px" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXComboBox fx:id="dipendentiType" layoutX="544.0" layoutY="36.0" onAction="#sceltaDipendenti" prefHeight="28.0" prefWidth="176.0" unFocusColor="BLACK" />
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="600.0" prefWidth="966.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="scrollPane" centerShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" pannable="true" prefHeight="600.0" prefViewportHeight="600.0" prefViewportWidth="870.0" prefWidth="870.0" scaleShape="false" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" styleClass="noFocus" stylesheets="@../css/scrollBarStyle.css">
+                     <padding>
+                        <Insets left="20.0" right="10.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+                  <JFXSpinner fx:id="spinner" layoutX="415.0" layoutY="250.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <JFXButton fx:id="addBtn" contentDisplay="GRAPHIC_ONLY" layoutX="803.0" layoutY="626.0" onAction="#addDipendente" style="-fx-background-color: linear-gradient(#162643,#2d5a89); -fx-background-radius: 50px;" text="add">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="PLUS" />
+         </graphic>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+.white{
+        -fx-prompt-text-fill : white;
+        -fx-prompt-text-opacity : 0.5;
+        -fx-text-fill: white;
+}
+
+.background{
+        -fx-background-color: linear-gradient(#162643,#2d5a89);
+        -fx-background-radius: 20;
+}
+.background2{
+        -fx-background-color: linear-gradient(#162643,#2d5a89);
+}
+.botton{
+        -fx-text-fill: #425c2c;
+}
+
+.jfx-date-picker .text-field{
+        -fx-prompt-text-fill: White;
+        -fx-text-fill: white;
+        -fx-text-inner-color: white;
+}
+.combo-box .cell {
+        -fx-background-color: #162643;
+        -fx-text-fill: white;
+}
+.combo-box .cell:hover {
+        -fx-background-color: #2d5a89;
+}

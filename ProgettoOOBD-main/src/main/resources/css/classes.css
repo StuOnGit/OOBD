@@ -1,0 +1,11 @@
+.sLabels:hover{ /* effetto per i pulsanti laterali*/
+    -fx-background-color: #18283f;
+}
+
+.tratte{
+    -fx-background-color: #f4f4f4;
+}
+.tratte:hover{
+    -fx-background-color: #2d5a89;
+}
+

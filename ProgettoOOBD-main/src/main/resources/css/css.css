@@ -1,0 +1,16 @@
+.white{
+    -fx-prompt-text-fill : white;
+    -fx-prompt-text-opacity : 0.5;
+    -fx-text-fill: white;
+}
+
+.background{
+    -fx-background-color: linear-gradient(#162643,#2d5a89);
+    -fx-background-radius: 20;
+}
+.background2{
+    -fx-background-color: linear-gradient(#162643,#2d5a89);
+}
+.botton{
+    -fx-text-fill: #425c2c;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="870.0" style="-fx-background-color: f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerCompagnie">
+    <children>
+        <BorderPane prefHeight="700.0" prefWidth="870.0">
+            <top>
+                <Pane prefHeight="139.0" prefWidth="870.0" style="-fx-background-color: f0f0f0; -fx-background-radius: 0 25 0 0;" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="searchBar" layoutX="89.0" layoutY="70.0" onKeyTyped="#search" prefHeight="40.0" prefWidth="426.0" promptText="🔍Search..." style="-fx-background-radius: 25px; -fx-background-color: #dcdcdc; -fx-accent: c0c0c0;">
+                            <font>
+                                <Font name="Calibri" size="18.0" />
+                            </font>
+                        </TextField>
+                        <JFXButton contentDisplay="CENTER" layoutX="34.0" layoutY="70.0" onAction="#canc" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20px; -fx-background-color: #dcdcdc;" textFill="#ffffff00">
+                            <graphic>
+                                <FontAwesomeIcon iconName="REMOVE" size="20px" />
+                            </graphic>
+                        </JFXButton>
+                        <JFXComboBox fx:id="searchMode" layoutX="545.0" layoutY="76.0" prefHeight="28.0" prefWidth="88.0" />
+                  <HBox layoutX="34.0" layoutY="14.0" spacing="10.0">
+                     <children>
+                        <Label text="Aeroporto di:">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="aeroportoGestito" text="--">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                    </children>
+                </Pane>
+            </top>
+            <center>
+                <ScrollPane fx:id="scroll" centerShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" pannable="true" prefHeight="600.0" prefViewportHeight="600.0" prefViewportWidth="870.0" prefWidth="870.0" scaleShape="false" styleClass="noFocus" stylesheets="@../css/scrollBarStyle.css" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+        <JFXButton fx:id="addBtn" contentDisplay="GRAPHIC_ONLY" layoutX="803.0" layoutY="626.0" onAction="#add" style="-fx-background-color: linear-gradient(#162643,#2d5a89); -fx-background-radius: 50px;" text="add">
+            <graphic>
+                <FontAwesomeIcon fill="WHITE" iconName="PLUS" />
+            </graphic>
+            <font>
+                <Font size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXSpinner fx:id="spinner" layoutX="415.0" layoutY="350.0" visible="false" />
+    </children>
+</AnchorPane>

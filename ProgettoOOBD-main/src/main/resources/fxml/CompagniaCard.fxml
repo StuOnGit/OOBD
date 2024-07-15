@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="225.0" prefWidth="260.0" style="-fx-background-radius: 25px; -fx-border-radius: 25px; -fx-background-color: e0e0e0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <Circle fx:id="iconCircle" fill="#e0e0e0" layoutX="180.0" layoutY="87.0" radius="50.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <VBox alignment="CENTER" layoutX="11.0" layoutY="14.0">
+         <children>
+              <Label fx:id="nome" text="Vueling " wrapText="true">
+                  <font>
+                      <Font name="System Bold" size="30.0" />
+                  </font>
+              </Label>
+            <Label fx:id="sigla" text="(VLG)">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="11.0" layoutY="130.0">
+         <children>
+            <Label fx:id="nazione" text="Spagna">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="FLAG" />
+               </graphic>
+            </Label>
+            <Label fx:id="pesoMassimo" text="Peso max: 23kg">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="CUBES" />
+               </graphic>
+            </Label>
+            <Label fx:id="prezzoBagagli" text="Prezzo bagagli: 1.5$">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="BRIEFCASE" />
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

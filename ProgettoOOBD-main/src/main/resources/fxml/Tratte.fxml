@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="870.0" style="-fx-background-color: f4f4f4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerTratte">
+   <children>
+      <TextField fx:id="searchBar" layoutX="87.0" layoutY="54.0" onKeyTyped="#search" prefHeight="41.0" prefWidth="282.0" promptText="🔍Search..." style="-fx-background-color: #dcdcdc; -fx-background-radius: 25px;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXDatePicker fx:id="dpk1" defaultColor="#0028ff" layoutX="498.0" layoutY="62.0" onAction="#datePick" />
+      <JFXDatePicker fx:id="dpk2" defaultColor="BLUE" layoutX="686.0" layoutY="62.0" onAction="#datePick" />
+      <HBox layoutX="32.0" layoutY="141.0" prefHeight="27.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="170.0" text="Tratta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="88.0" text="N° volo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="119.0" text="Data">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="96.0" text="Partenza">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="115.0" text="Ritardo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="54.0" text="Gate">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Compagnia">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="686.0" layoutY="53.0" text="Al" />
+      <Label layoutX="498.0" layoutY="54.0" text="Da" />
+      <JFXButton fx:id="cancelBtn" contentDisplay="GRAPHIC_ONLY" layoutX="32.0" layoutY="55.0" onAction="#canc" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20px; -fx-background-color: #dcdcdc;">
+         <graphic>
+            <FontAwesomeIcon iconName="REMOVE" size="20px" />
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="searchMode" layoutX="380.0" layoutY="63.0" prefHeight="28.0" prefWidth="103.0" />
+      <JFXListView fx:id="listView" layoutY="169.0" onMouseClicked="#mouseClick" prefHeight="530.0" prefWidth="870.0" styleClass="noFocus" stylesheets="@../css/scrollBarStyle.css" />
+      <JFXButton fx:id="addBtn" contentDisplay="GRAPHIC_ONLY" layoutX="803.0" layoutY="626.0" onAction="#add" style="-fx-background-color: linear-gradient(#162643,#2d5a89); -fx-background-radius: 50px;" text="add">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="PLUS" />
+         </graphic>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXSpinner fx:id="spinner" layoutX="415.0" layoutY="350.0" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pannello" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#enterPressed" onMouseDragged="#moveWindow" onMousePressed="#setOffset" prefHeight="481.0" prefWidth="376.0" styleClass="background" stylesheets="@../css/white.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerLogin">
+   <children>
+      <Hyperlink layoutX="14.0" layoutY="439.0" onMouseClicked="#Exit" text="close" textFill="#ff0f0f" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <JFXTextField fx:id="email" focusColor="#47b78d" labelFloat="true" layoutX="71.0" layoutY="175.0" prefHeight="36.0" prefWidth="235.0" promptText="email" styleClass="white" stylesheets="@../css/white.css" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#47b78d" labelFloat="true" layoutX="71.0" layoutY="252.0" prefHeight="24.0" prefWidth="235.0" promptText="password" styleClass="white" stylesheets="@../css/white.css" unFocusColor="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXPasswordField>
+      <JFXButton fx:id="LoginButton" layoutX="132.0" layoutY="334.0" onAction="#loginAction" ripplerFill="#4ba17e" text="Login" textFill="#4cc258">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="100.0" fitWidth="324.0" layoutX="27.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/nome+logo_W.png" />
+         </image>
+      </ImageView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</Pane>

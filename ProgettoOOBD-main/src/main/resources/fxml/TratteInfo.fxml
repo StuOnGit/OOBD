@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseDragged="#moveWindow" onMousePressed="#setOffset" prefHeight="550.0" prefWidth="900.0" styleClass="background" stylesheets="@../css/white.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerTratteInfo">
+   <children>
+      <HBox layoutX="287.0" layoutY="14.0">
+         <children>
+            <Label fx:id="partenza" text="Partenza" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" iconName="LONG_ARROW_RIGHT" size="3em">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="15.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label fx:id="arrivo" text="Arrivo" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="72.0" spacing="25.0">
+         <children>
+            <VBox spacing="15.0">
+               <children>
+                  <Label text="Numero Volo" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="PLANE" />
+                     </graphic>
+                  </Label>
+                  <Label text="Compagnia" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="BUILDING" />
+                     </graphic>
+                  </Label>
+                  <Label text="Partenza" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="CALENDAR_ALT" />
+                     </graphic>
+                  </Label>
+                  <Label text="Durata" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOCK_ALT" />
+                     </graphic>
+                  </Label>
+                  <Label text="Ritardo" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOCK_ALT" />
+                     </graphic>
+                  </Label>
+                  <Label text="Gate" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="TH_LARGE" />
+                     </graphic>
+                  </Label>
+                  <Label text="Posti" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="LINUX" />
+                     </graphic>
+                  </Label>
+                  <Label text="Prenotati" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon iconName="STREET_VIEW" />
+                     </graphic>
+                  </Label>
+                  <JFXCheckBox fx:id="completata" allowIndeterminate="true" checkedColor="TEAL" disable="true" style="-fx-opacity: 1;" text="Completata" textFill="WHITE" unCheckedColor="BLACK">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXCheckBox>
+               </children>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <Label fx:id="numeroVolo" text="--------" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="compagnia" text="----------" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dataPartenza" prefHeight="35.0" text="--/--/---- --:--" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="durata" prefHeight="35.0" text="--''" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ritardo" text="0''" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gate" text="--" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="posti" text="-" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passeggeri" text="0" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="648.0" layoutY="486.0">
+         <children>
+            <JFXButton fx:id="closeBtn" onAction="#close" opacity="0.47" prefHeight="45.0" prefWidth="99.0" style="-fx-background-radius: 0;" text="Chiudi" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="RED" iconName="TIMES_CIRCLE" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="acquistaBtn" onAction="#buyTicket" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: teal; -fx-background-radius: 0;" text="Acquista" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="DOLLAR" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label fx:id="nonGestitaLbl" ellipsisString="" layoutX="419.0" layoutY="203.0" prefHeight="134.0" prefWidth="446.0" text="L'imbarco della tratta non è gestito da questo aeroporto" textAlignment="CENTER" textFill="GREY" textOverrun="CLIP" visible="false" wrapText="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="codePane" layoutX="350.0" layoutY="144.0">
+         <children>
+            <HBox layoutX="28.0" layoutY="43.0" spacing="20.0">
+               <children>
+                  <VBox fx:id="code" prefHeight="100.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="DIVERSAMENTE_ABILI" prefHeight="20.0" text="Diversamente Abili: " textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="WHEELCHAIR" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="FAMIGLIE" prefHeight="20.0" text="Famiglie: " textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="CHILD" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="BUSINESS" prefHeight="20.0" text="Business: " textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="BRIEFCASE" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="PRIORITY" prefHeight="20.0" text="Priority: " textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="MONEY" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="ECONOMY" prefHeight="20.0" text="Economy: " textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="DOLLAR" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox>
+                     <children>
+                        <VBox fx:id="code1" prefHeight="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="DIVERSAMENTE_ABILI1" alignment="CENTER" prefHeight="35.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="FAMIGLIE1" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="BUSINESS1" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="PRIORITY1" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ECONOMY1" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="code11" prefHeight="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="DIVERSAMENTE_ABILI11" alignment="CENTER" prefHeight="35.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="FAMIGLIE11" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="BUSINESS11" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="PRIORITY11" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ECONOMY11" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="code111" prefHeight="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="DIVERSAMENTE_ABILI111" alignment="CENTER" prefHeight="35.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="FAMIGLIE111" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="BUSINESS111" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="PRIORITY111" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ECONOMY111" alignment="CENTER" prefHeight="20.0" prefWidth="80.0" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Label text="Code di Imbarco" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="COLUMNS" />
+               </graphic>
+            </Label>
+            <HBox layoutX="283.0" layoutY="4.0" spacing="20.0">
+               <children>
+                  <Label text="Apertura" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Stima" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tempo Eff." textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
